@@ -9,3 +9,7 @@ const app = express();
 //View Engine
 app.engine('handlebard', exphbs({ extname: "hbs", defaultLayout: false, layoutsDir: "views/ " }));
 app.set('view engine', 'handlebars');
+
+// body parser middleware
+app.use(bodyparser.urlencoded({ extended: false }));
+app.use(bodyparser.json());
