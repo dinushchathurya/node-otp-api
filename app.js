@@ -7,7 +7,7 @@ const exhbs = require('express-handlebars')
 const app = express();
 
 //View Engine
-app.engine('handlebard', exhbs({ extname: "hbs", defaultLayout: false, layoutsDir: "views/ " }));
+app.engine('handlebars', exhbs({ extname: "hbs", defaultLayout: false, layoutsDir: "views/ " }));
 app.set('view engine', 'handlebars');
 
 // body parser middleware
