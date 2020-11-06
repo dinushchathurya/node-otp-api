@@ -19,3 +19,9 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.get('/', function (req, res) {
     res.send("Node.js 2 way authnetication");
 });
+
+//defining port
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`app is live at ${PORT}`);
+})
