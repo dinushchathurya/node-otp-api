@@ -13,3 +13,9 @@ app.set('view engine', 'handlebars');
 // body parser middleware
 app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
+
+//static folder
+app.use('/public', express.static(path.join(__dirname, 'public')));
+app.get('/', function (req, res) {
+    res.send("Node.js 2 way authnetication");
+});
